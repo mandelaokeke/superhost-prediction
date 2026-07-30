@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Notebook tooling
+.ipynb_checkpoints/
+
+# Local data and generated model artifacts
+data/Data/
+outputs/
+*.joblib
+*.keras
+
+# Operating-system and editor files
+.DS_Store
+.idea/
+.vscode/
