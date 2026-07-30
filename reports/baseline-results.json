@@ -1,0 +1,831 @@
+{
+  "benchmark_version": 1,
+  "random_state": 42,
+  "environment": {
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0"
+  },
+  "dataset": {
+    "rows_before_target_filter": 36445,
+    "rows_after_target_filter": 35917,
+    "unique_hosts": 21342,
+    "scrape_id": [
+      20260213082241
+    ],
+    "last_scraped": [
+      "2026-02-13",
+      "2026-02-14"
+    ],
+    "neighbourhood_groups": {
+      "Manhattan": 16355,
+      "Brooklyn": 13254,
+      "Queens": 5329,
+      "Bronx": 1138,
+      "Staten Island": 369
+    },
+    "file_sha256": {
+      "airbnb_main.csv": "75db63df0a096a114f5e38db2d156a33f43b49ab6a09f5600815f00bdcf6b48c",
+      "airbnb_test.csv": "f5b3e18cc82f797b3607e28881ba23a8b7ed0f879cfe732ad8c571b85adaef90",
+      "airbnb_train.csv": "14b45e23e8f57714826767e02b32bf115f9e284f9402450ac51493874b36cd51",
+      "airbnb_validation.csv": "f3023a9d70cc16ee196bb589c0d28ab77ba6e568e414a214cb5610d430b0aad8"
+    }
+  },
+  "historical_split_overlap": {
+    "train_validation": {
+      "shared_hosts": 1211,
+      "train_affected_rows": 7980,
+      "validation_affected_rows": 2518
+    },
+    "train_test": {
+      "shared_hosts": 1175,
+      "train_affected_rows": 7955,
+      "test_affected_rows": 2535
+    },
+    "validation_test": {
+      "shared_hosts": 546,
+      "validation_affected_rows": 1724,
+      "test_affected_rows": 1799
+    }
+  },
+  "grouped_split": {
+    "train": {
+      "rows": 25287,
+      "hosts": 14939,
+      "positive_prevalence": 0.1916795191204967
+    },
+    "validation": {
+      "rows": 5742,
+      "hosts": 3201,
+      "positive_prevalence": 0.1980146290491118
+    },
+    "test": {
+      "rows": 4888,
+      "hosts": 3202,
+      "positive_prevalence": 0.20560556464811783
+    }
+  },
+  "feature_summary": {
+    "numeric": [
+      "accommodates",
+      "bathrooms",
+      "bedrooms",
+      "beds",
+      "minimum_nights",
+      "maximum_nights",
+      "availability_30",
+      "availability_60",
+      "availability_90",
+      "availability_365",
+      "number_of_reviews",
+      "number_of_reviews_ltm",
+      "reviews_per_month",
+      "review_scores_rating",
+      "review_scores_accuracy",
+      "review_scores_cleanliness",
+      "review_scores_checkin",
+      "review_scores_communication",
+      "review_scores_location",
+      "review_scores_value",
+      "calculated_host_listings_count",
+      "calculated_host_listings_count_entire_homes",
+      "calculated_host_listings_count_private_rooms",
+      "calculated_host_listings_count_shared_rooms"
+    ],
+    "categorical": [
+      "room_type",
+      "property_type",
+      "neighbourhood_cleansed",
+      "host_identity_verified",
+      "has_availability"
+    ],
+    "all_missing_excluded": [
+      "host_response_rate",
+      "host_acceptance_rate",
+      "price",
+      "host_response_time",
+      "instant_bookable"
+    ],
+    "source_feature_count": 29,
+    "processed_feature_count": 319
+  },
+  "models": {
+    "dummy_prior": {
+      "selected_threshold": 0.1,
+      "validation_threshold_table": [
+        {
+          "threshold": 0.1,
+          "precision": 0.1980146290491118,
+          "recall": 1.0,
+          "f1": 0.33057130396860007
+        },
+        {
+          "threshold": 0.15,
+          "precision": 0.1980146290491118,
+          "recall": 1.0,
+          "f1": 0.33057130396860007
+        },
+        {
+          "threshold": 0.2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.25,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.35,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.45,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.55,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.6,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.65,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.75,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.85,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "threshold": 0.9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      ],
+      "test_at_selected_threshold": {
+        "threshold": 0.1,
+        "accuracy": 0.20560556464811783,
+        "precision": 0.20560556464811783,
+        "recall": 1.0,
+        "f1": 0.3410826404208383,
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "pr_auc": 0.20560556464811783,
+        "brier_score": 0.16352585117788382,
+        "confusion_matrix": [
+          [
+            0,
+            3883
+          ],
+          [
+            0,
+            1005
+          ]
+        ]
+      },
+      "test_at_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.7943944353518821,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "pr_auc": 0.20560556464811783,
+        "brier_score": 0.16352585117788382,
+        "confusion_matrix": [
+          [
+            3883,
+            0
+          ],
+          [
+            1005,
+            0
+          ]
+        ]
+      }
+    },
+    "logistic_regression": {
+      "selected_threshold": 0.4,
+      "validation_threshold_table": [
+        {
+          "threshold": 0.1,
+          "precision": 0.2602296143656167,
+          "recall": 0.7774846086191732,
+          "f1": 0.38994265549183943
+        },
+        {
+          "threshold": 0.15,
+          "precision": 0.31146179401993357,
+          "recall": 0.6596306068601583,
+          "f1": 0.4231311706629055
+        },
+        {
+          "threshold": 0.2,
+          "precision": 0.34925864909390447,
+          "recall": 0.5593667546174143,
+          "f1": 0.4300202839756592
+        },
+        {
+          "threshold": 0.25,
+          "precision": 0.4005702066999287,
+          "recall": 0.49428320140721194,
+          "f1": 0.44251968503937006
+        },
+        {
+          "threshold": 0.3,
+          "precision": 0.4425182481751825,
+          "recall": 0.42656112576956906,
+          "f1": 0.4343931930138827
+        },
+        {
+          "threshold": 0.35,
+          "precision": 0.4798619102416571,
+          "recall": 0.36675461741424803,
+          "f1": 0.41575274177467597
+        },
+        {
+          "threshold": 0.4,
+          "precision": 0.5170940170940171,
+          "recall": 0.31926121372031663,
+          "f1": 0.39477977161500816
+        },
+        {
+          "threshold": 0.45,
+          "precision": 0.5483870967741935,
+          "recall": 0.2691292875989446,
+          "f1": 0.36106194690265486
+        },
+        {
+          "threshold": 0.5,
+          "precision": 0.5714285714285714,
+          "recall": 0.23218997361477572,
+          "f1": 0.3302063789868668
+        },
+        {
+          "threshold": 0.55,
+          "precision": 0.6043360433604336,
+          "recall": 0.1961301671064204,
+          "f1": 0.2961487383798141
+        },
+        {
+          "threshold": 0.6,
+          "precision": 0.6379310344827587,
+          "recall": 0.1627088830255057,
+          "f1": 0.2592852137351086
+        },
+        {
+          "threshold": 0.65,
+          "precision": 0.6751054852320675,
+          "recall": 0.14072119613016712,
+          "f1": 0.2328966521106259
+        },
+        {
+          "threshold": 0.7,
+          "precision": 0.7134502923976608,
+          "recall": 0.10729991204925242,
+          "f1": 0.18654434250764526
+        },
+        {
+          "threshold": 0.75,
+          "precision": 0.6934306569343066,
+          "recall": 0.08355321020228672,
+          "f1": 0.14913657770800628
+        },
+        {
+          "threshold": 0.8,
+          "precision": 0.7352941176470589,
+          "recall": 0.06596306068601583,
+          "f1": 0.12106537530266344
+        },
+        {
+          "threshold": 0.85,
+          "precision": 0.6756756756756757,
+          "recall": 0.04397537379067722,
+          "f1": 0.08257638315441784
+        },
+        {
+          "threshold": 0.9,
+          "precision": 0.6458333333333334,
+          "recall": 0.027264731750219876,
+          "f1": 0.05232067510548523
+        }
+      ],
+      "test_at_selected_threshold": {
+        "threshold": 0.4,
+        "accuracy": 0.8099427168576104,
+        "precision": 0.5557184750733137,
+        "recall": 0.37711442786069654,
+        "f1": 0.44931831653823356,
+        "balanced_accuracy": 0.6495409893617158,
+        "roc_auc": 0.7809748578764688,
+        "pr_auc": 0.4895724152291214,
+        "brier_score": 0.134280974454201,
+        "confusion_matrix": [
+          [
+            3580,
+            303
+          ],
+          [
+            626,
+            379
+          ]
+        ]
+      },
+      "test_at_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8134206219312602,
+        "precision": 0.6021978021978022,
+        "recall": 0.272636815920398,
+        "f1": 0.37534246575342467,
+        "balanced_accuracy": 0.6130116863531941,
+        "roc_auc": 0.7809748578764688,
+        "pr_auc": 0.4895724152291214,
+        "brier_score": 0.134280974454201,
+        "confusion_matrix": [
+          [
+            3702,
+            181
+          ],
+          [
+            731,
+            274
+          ]
+        ]
+      }
+    },
+    "hist_gradient_boosting": {
+      "selected_threshold": 0.35,
+      "validation_threshold_table": [
+        {
+          "threshold": 0.1,
+          "precision": 0.37458353165159447,
+          "recall": 0.6921723834652594,
+          "f1": 0.48610253242742435
+        },
+        {
+          "threshold": 0.15,
+          "precision": 0.40724716062736616,
+          "recall": 0.662269129287599,
+          "f1": 0.5043536503683858
+        },
+        {
+          "threshold": 0.2,
+          "precision": 0.43502135448444174,
+          "recall": 0.6270888302550571,
+          "f1": 0.5136887608069164
+        },
+        {
+          "threshold": 0.25,
+          "precision": 0.46680216802168023,
+          "recall": 0.6059806508355321,
+          "f1": 0.527363184079602
+        },
+        {
+          "threshold": 0.3,
+          "precision": 0.48789435069699194,
+          "recall": 0.5848724714160071,
+          "f1": 0.532
+        },
+        {
+          "threshold": 0.35,
+          "precision": 0.5047619047619047,
+          "recall": 0.5593667546174143,
+          "f1": 0.5306633291614519
+        },
+        {
+          "threshold": 0.4,
+          "precision": 0.5093220338983051,
+          "recall": 0.5285839929639402,
+          "f1": 0.5187742770824342
+        },
+        {
+          "threshold": 0.45,
+          "precision": 0.5252062328139322,
+          "recall": 0.503957783641161,
+          "f1": 0.5143626570915619
+        },
+        {
+          "threshold": 0.5,
+          "precision": 0.5280788177339901,
+          "recall": 0.4714160070360598,
+          "f1": 0.49814126394052044
+        },
+        {
+          "threshold": 0.55,
+          "precision": 0.5376458112407211,
+          "recall": 0.44591029023746703,
+          "f1": 0.4875
+        },
+        {
+          "threshold": 0.6,
+          "precision": 0.5443037974683544,
+          "recall": 0.4160070360598065,
+          "f1": 0.4715852442671984
+        },
+        {
+          "threshold": 0.65,
+          "precision": 0.5408805031446541,
+          "recall": 0.3781882145998241,
+          "f1": 0.4451345755693582
+        },
+        {
+          "threshold": 0.7,
+          "precision": 0.5488308115543329,
+          "recall": 0.35092348284960423,
+          "f1": 0.4281115879828326
+        },
+        {
+          "threshold": 0.75,
+          "precision": 0.5455950540958269,
+          "recall": 0.31046613896218117,
+          "f1": 0.3957399103139013
+        },
+        {
+          "threshold": 0.8,
+          "precision": 0.5240641711229946,
+          "recall": 0.25857519788918204,
+          "f1": 0.3462897526501767
+        },
+        {
+          "threshold": 0.85,
+          "precision": 0.5211581291759465,
+          "recall": 0.20580474934036938,
+          "f1": 0.29508196721311475
+        },
+        {
+          "threshold": 0.9,
+          "precision": 0.5164473684210527,
+          "recall": 0.13808267370272648,
+          "f1": 0.21790423317140875
+        }
+      ],
+      "test_at_selected_threshold": {
+        "threshold": 0.35,
+        "accuracy": 0.8549509001636661,
+        "precision": 0.6252115059221658,
+        "recall": 0.7353233830845771,
+        "f1": 0.675811614083219,
+        "balanced_accuracy": 0.8106181684930998,
+        "roc_auc": 0.9072860011044444,
+        "pr_auc": 0.6838779679498661,
+        "brier_score": 0.098105432574512,
+        "confusion_matrix": [
+          [
+            3440,
+            443
+          ],
+          [
+            266,
+            739
+          ]
+        ]
+      },
+      "test_at_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8651800327332242,
+        "precision": 0.6872294372294372,
+        "recall": 0.6318407960199005,
+        "f1": 0.6583722135821669,
+        "balanced_accuracy": 0.7787069032893734,
+        "roc_auc": 0.9072860011044444,
+        "pr_auc": 0.6838779679498661,
+        "brier_score": 0.098105432574512,
+        "confusion_matrix": [
+          [
+            3594,
+            289
+          ],
+          [
+            370,
+            635
+          ]
+        ]
+      },
+      "subgroup_diagnostics": {
+        "neighbourhood_group_cleansed": {
+          "Bronx": {
+            "rows": 171,
+            "positive_prevalence": 0.23976608187134502,
+            "threshold": 0.35,
+            "accuracy": 0.8362573099415205,
+            "precision": 0.6181818181818182,
+            "recall": 0.8292682926829268,
+            "f1": 0.7083333333333334,
+            "balanced_accuracy": 0.8338649155722326,
+            "roc_auc": 0.9195121951219511,
+            "pr_auc": 0.8128465408872332,
+            "brier_score": 0.09518696859327822,
+            "confusion_matrix": [
+              [
+                109,
+                21
+              ],
+              [
+                7,
+                34
+              ]
+            ]
+          },
+          "Brooklyn": {
+            "rows": 1904,
+            "positive_prevalence": 0.20693277310924368,
+            "threshold": 0.35,
+            "accuracy": 0.8739495798319328,
+            "precision": 0.6711111111111111,
+            "recall": 0.766497461928934,
+            "f1": 0.7156398104265402,
+            "balanced_accuracy": 0.8342421084479107,
+            "roc_auc": 0.92337546643359,
+            "pr_auc": 0.7445397693436601,
+            "brier_score": 0.08626520350456232,
+            "confusion_matrix": [
+              [
+                1362,
+                148
+              ],
+              [
+                92,
+                302
+              ]
+            ]
+          },
+          "Manhattan": {
+            "rows": 2057,
+            "positive_prevalence": 0.1861934856587263,
+            "threshold": 0.35,
+            "accuracy": 0.8410306271268838,
+            "precision": 0.5614035087719298,
+            "recall": 0.6684073107049608,
+            "f1": 0.6102502979737783,
+            "balanced_accuracy": 0.7744664988411303,
+            "roc_auc": 0.8923007695643086,
+            "pr_auc": 0.5928717399469757,
+            "brier_score": 0.10638525450103065,
+            "confusion_matrix": [
+              [
+                1474,
+                200
+              ],
+              [
+                127,
+                256
+              ]
+            ]
+          },
+          "Queens": {
+            "rows": 698,
+            "positive_prevalence": 0.23209169054441262,
+            "threshold": 0.35,
+            "accuracy": 0.8524355300859598,
+            "precision": 0.6528497409326425,
+            "recall": 0.7777777777777778,
+            "f1": 0.7098591549295775,
+            "balanced_accuracy": 0.8263888888888888,
+            "roc_auc": 0.8980560162152202,
+            "pr_auc": 0.7091382783478986,
+            "brier_score": 0.10309722550404764,
+            "confusion_matrix": [
+              [
+                469,
+                67
+              ],
+              [
+                36,
+                126
+              ]
+            ]
+          }
+        },
+        "room_type": {
+          "Entire home/apt": {
+            "rows": 2618,
+            "positive_prevalence": 0.23071046600458364,
+            "threshold": 0.35,
+            "accuracy": 0.846829640947288,
+            "precision": 0.6512667660208644,
+            "recall": 0.7235099337748344,
+            "f1": 0.6854901960784314,
+            "balanced_accuracy": 0.803661620313435,
+            "roc_auc": 0.9022406071407433,
+            "pr_auc": 0.7035921703557246,
+            "brier_score": 0.10500431709403094,
+            "confusion_matrix": [
+              [
+                1780,
+                234
+              ],
+              [
+                167,
+                437
+              ]
+            ]
+          },
+          "Private room": {
+            "rows": 2178,
+            "positive_prevalence": 0.18135904499540864,
+            "threshold": 0.35,
+            "accuracy": 0.8608815426997245,
+            "precision": 0.5912698412698413,
+            "recall": 0.7544303797468355,
+            "f1": 0.6629588431590656,
+            "balanced_accuracy": 0.8194473828066763,
+            "roc_auc": 0.9116160361217405,
+            "pr_auc": 0.6700583909716379,
+            "brier_score": 0.09254755760697109,
+            "confusion_matrix": [
+              [
+                1577,
+                206
+              ],
+              [
+                97,
+                298
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "logistic_coefficients": {
+    "most_negative": [
+      {
+        "feature": "categorical__neighbourhood_cleansed_Mount Hope",
+        "coefficient": -1.7968039614933649
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_South Ozone Park",
+        "coefficient": -1.731554031444247
+      },
+      {
+        "feature": "categorical__room_type_Hotel room",
+        "coefficient": -1.6663385795869512
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_St. Albans",
+        "coefficient": -1.3475682316517819
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Battery Park City",
+        "coefficient": -1.3018815810963553
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Williamsbridge",
+        "coefficient": -1.261240394453132
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Unionport",
+        "coefficient": -1.243416836634012
+      },
+      {
+        "feature": "categorical__property_type_Private room in serviced apartment",
+        "coefficient": -1.2231757242994723
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Port Richmond",
+        "coefficient": -1.133531908838195
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Flatiron District",
+        "coefficient": -1.105443730754296
+      },
+      {
+        "feature": "categorical__property_type_Private room in resort",
+        "coefficient": -1.0855106299539046
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Morris Heights",
+        "coefficient": -1.053080017278056
+      },
+      {
+        "feature": "categorical__property_type_Tiny home",
+        "coefficient": -1.0470618584905398
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Port Morris",
+        "coefficient": -0.95498924741629
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Rego Park",
+        "coefficient": -0.9507485796099294
+      }
+    ],
+    "most_positive": [
+      {
+        "feature": "categorical__neighbourhood_cleansed_Grant City",
+        "coefficient": 2.9117644515617234
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Coney Island",
+        "coefficient": 2.225804215859135
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Hunts Point",
+        "coefficient": 1.6198189120468198
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Morris Park",
+        "coefficient": 1.522826668254973
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Sea Gate",
+        "coefficient": 1.4205153079836428
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Briarwood",
+        "coefficient": 1.334710121584833
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Kew Gardens",
+        "coefficient": 1.183760866845919
+      },
+      {
+        "feature": "categorical__property_type_Entire condo",
+        "coefficient": 1.1290492379072796
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_South Beach",
+        "coefficient": 1.122546423392121
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Westerleigh",
+        "coefficient": 1.0727453725841694
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Woodhaven",
+        "coefficient": 1.0524127122745734
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Bayside",
+        "coefficient": 1.047779584893178
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_City Island",
+        "coefficient": 0.9890597512717464
+      },
+      {
+        "feature": "categorical__neighbourhood_cleansed_Bay Terrace",
+        "coefficient": 0.9810224457810481
+      },
+      {
+        "feature": "categorical__property_type_Private room in guest suite",
+        "coefficient": 0.9524319103736245
+      }
+    ]
+  }
+}
